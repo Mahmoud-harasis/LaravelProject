@@ -4,7 +4,15 @@
 @section('Services_active', 'active')
 
 @section('content')
-  <section class="service_section layout_padding">
+<div class="d-flex justify-content-center">
+    <div class="col-lg-3">
+        <form class="d-flex" style="margin-top: -2rem">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+        </form>
+    </div>
+  </div>
+<section class="service_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
         <h2> Our Services </h2>
@@ -14,7 +22,7 @@
 
         @foreach ($collection as $item)
         <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
+          <div class="box" style="min-height: 30em">
             <div class="img-box">
               <img src="{{URL::asset("storage/serviceimage/$item->Service_Image")}}" alt="" />
             </div>
@@ -23,22 +31,24 @@
                 {{$item->Service_Name}}
               </h5>
               <h6>
-                {{$item->Service_Price}} JD
+                Service Price : {{$item->Service_Price}} JD
               </h6>
               <h6>
-                {{$item->Service_Duration}} Hours
+                Service Duration : {{$item->Service_Duration}} Hours
               </h6>
               <p>
                 {{$item->Service_Description}}
               </p>
             </div>
-            <div class="btn-box">
+            <div class="btn-box" >
               {{-- create ---------edit --}}
               @if (Route::has('login'))
               @auth
               <a href="{{route('Reservation.show',$item->id)}}">
-              @else
-              <a href="{{route('Reservation.show',$item->id)}}">
+                Book Now
+              </a>                   
+              @else  
+              <a href="/login">
                 Book Now
               </a>
               @endif
@@ -47,7 +57,7 @@
           </div>
         </div>
         @endforeach
-        {{-- <div class="col-sm-6 col-md-4 mx-auto">
+        <div class="col-sm-6 col-md-4 mx-auto">
           <div class="box ">
             <div class="img-box">
               <img src="images/s2.png" alt="" />
@@ -67,12 +77,13 @@
               </a>
             </div>
           </div>
-        </div> --}}
+        </div>
 {{-- /////////////////////////////////////////////////// --}}
     </div>
-  </section>
+  </div>
+</section>
 @endsection
-<section style="background-color: #eee;">
+{{-- <section style="background-color: #eee;">
     <div class="text-center container py-5">
         <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4>
         <div class="row">
@@ -104,4 +115,5 @@
             </div>
         </div>
     </div>
-  </section>
+  </section> --}}
+
