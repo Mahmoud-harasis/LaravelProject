@@ -35,7 +35,7 @@
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg custom_nav-container ps-3 pe-3 pt-2">
             <a class="navbar-brand  pb-2 ms-2" href="/">
                 <span>
-                3MART
+                3-MART
                 </span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

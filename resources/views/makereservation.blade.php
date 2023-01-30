@@ -33,7 +33,7 @@
 </main>
   <!-- contact section -->
   <h1>Fill your information to complete your booking</h1>
-  <form action="{{route("Reservation.store")}}" method="post" enctype="multipart/form-data" >
+  <form action="{{route("Reservation.store")}}" method="post" class="col-5 " enctype="multipart/form-data" >
     {{-- <h1>{{$serviceid}}</h1> --}}
       @csrf
       <input type="hidden" name="serviceid" id="Category_Name" class="form-control" value={{$serviceid}}><br>

@@ -33,18 +33,18 @@
             </div>
             <div class="btn-box">
               {{-- create ---------edit --}}
-              @if (route::has('login'))
+              @if (Route::has('login'))
               @auth
-              <a href="{{route('Reservation.show',$item->id)}}">                   
+              <a href="{{route('Reservation.show',$item->id)}}"> Book Now </a>                 
               @else  
-              <a href="{{route('Reservation.show',$item->id)}}">
-                Book Now
-              </a>
+              <a href="{{route('Reservation.show',$item->id)}}">Book Now</a>
+              @endif
+              @endif
             </div>
           </div>
         </div>
         @endforeach
-        <div class="col-sm-6 col-md-4 mx-auto">
+        {{-- <div class="col-sm-6 col-md-4 mx-auto">
           <div class="box ">
             <div class="img-box">
               <img src="images/s2.png" alt="" />
@@ -64,7 +64,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> --}}
 {{-- /////////////////////////////////////////////////// --}}
     </div>
   </section>

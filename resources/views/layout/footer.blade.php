@@ -74,7 +74,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayDateYear"></span> All Rights Reserved By
-        <a href="https://html.design/">3MART</a>
+        <a href="https://html.design/">3-MART</a>
       </p>
     </div>
   </footer>
